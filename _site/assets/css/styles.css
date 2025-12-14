@@ -1,0 +1,40 @@
+* { box-sizing: border-box; font-size: 20px; }
+
+body { font-family: Arial, Helvetica, sans-serif; }
+
+.current { color: green; }
+
+/* Style the header */
+header { padding: 0px; text-align: center; font-size: 35px; color: black; }
+
+logo-right { text-align: left; }
+
+/* Create two columns/boxes that floats next to each other */
+nav { float: left; width: 20%; /*  height: 300px;*/ /* only for demonstration, should be removed */ background: #ccc; padding: 20px; }
+
+/* Style the list inside the menu */
+nav ul { list-style-type: none; padding: 0; margin: 0; width: 100%; }
+
+li a { display: block; color: #000; padding: 8px 16px; text-decoration: none; }
+
+/* Change the link color on hover */
+li a:hover { background-color: #555; color: white; }
+
+article { float: left; padding: 20px; width: 70%; }
+
+/* Clear floats after the columns */
+section::after { content: ""; display: table; clear: both; }
+
+/* Style the footer */
+footer { background-color: #777; padding: 10px; text-align: center; color: white; }
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) { nav, article { width: 100%; height: auto; } }
+
+.grid-container2 { display: grid; grid-template-columns: auto auto; grid-gap: 10px; padding: 10px; }
+
+.grid-container2 > div { text-align: left; box-sizing: border-box; border: 1px solid #aaa; padding: 20px 20px; }
+
+page-title { text-align: left; font-size: 35px; color: blue; }
+
+/*# sourceMappingURL=styles.css.map */
