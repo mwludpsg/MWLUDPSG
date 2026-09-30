@@ -15,10 +15,59 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
+
         /*
+         * =========================================================
+         * 网站顶部标题
+         * =========================================================
+         */
+
+        #header .site-title {
+            display: block;
+            text-decoration: none;
+            border: 0;
+            padding: 0;
+        }
+
+        /* 第一行：LuoxiaHong Institute of Astronomy (LXHIoA); */
+        #header .site-title .institute-name {
+            display: block;
+            margin: 0 0 0.15em 0;
+            color: #ef482b;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.0em;
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        /* 第二行：Local Universe and Time Domain Astronomy Laboratory */
+        #header .site-title .lab-name {
+            display: block;
+            margin: 0;
+            color: #345484;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.8em;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* 第二行最后的 (LUTDLab) */
+        #header .site-title .lab-short {
+            color: #ef482b;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.65em;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+
+        /*
+         * =========================================================
          * 成员列表：桌面两列。
          * 同一行的卡片共享行高，避免后续成员出现错位。
+         * =========================================================
          */
+
         #member-grid.posts {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -49,6 +98,7 @@
          * 清除原模板生成的分隔线，
          * 使用下面的统一边框规则。
          */
+
         #member-grid.posts::before,
         #member-grid.posts::after,
         #member-grid.posts > article::before,
@@ -58,6 +108,7 @@
         }
 
         /* 右侧一列的间距和中间分隔线 */
+
         #member-grid.posts > article:nth-child(even) {
             padding-right: 0;
             padding-left: 3em;
@@ -65,6 +116,7 @@
         }
 
         /* 第一行不需要上方分隔线 */
+
         #member-grid.posts > article:nth-child(-n + 2) {
             padding-top: 0;
             border-top: 0;
@@ -74,6 +126,7 @@
          * 所有照片统一占用 200 × 240 px 的区域。
          * contain 保留完整照片，不拉伸、不裁切。
          */
+
         #member-grid.posts > article > img.member-photo {
             display: block;
             flex: 0 0 auto;
@@ -96,6 +149,7 @@
         }
 
         /* 同一行的邮箱按钮底部对齐 */
+
         #member-grid.posts > article > ul.actions {
             display: flex;
             flex-wrap: wrap;
@@ -114,6 +168,7 @@
         }
 
         /* 较长的邮箱在窄屏下允许换行 */
+
         #member-grid.posts > article > ul.actions .button {
             box-sizing: border-box;
             max-width: 100%;
@@ -125,6 +180,7 @@
         }
 
         /* ORCID 图标不使用成员照片尺寸 */
+
         #member-grid.posts .orcid-icon {
             display: block;
             width: 16px;
@@ -132,7 +188,23 @@
         }
 
         /* 手机屏幕改为单列 */
+
         @media screen and (max-width: 736px) {
+
+            #header .site-title .institute-name {
+                font-size: 1.35em;
+                line-height: 1.2;
+            }
+
+            #header .site-title .lab-name {
+                font-size: 1.15em;
+                line-height: 1.25;
+            }
+
+            #header .site-title .lab-short {
+                font-size: 0.65em;
+            }
+
             #member-grid.posts {
                 grid-template-columns: minmax(0, 1fr);
             }
@@ -148,6 +220,7 @@
                 border-top: 0;
             }
         }
+
     </style>
 </head>
 
@@ -162,8 +235,17 @@
 
                 <!-- Header -->
                 <header id="header">
-                    <a href="index.html" class="logo">
-                        Local Universe and Time Domain Astronomy Laboratory
+                    <a href="index.html" class="logo site-title">
+
+                        <span class="institute-name">
+                            LuoxiaHong Institute of Astronomy (LXHIoA);
+                        </span>
+
+                        <span class="lab-name">
+                            Local Universe and Time Domain Astronomy Laboratory
+                            <span class="lab-short">(LUTDLab)</span>
+                        </span>
+
                     </a>
                 </header>
 
@@ -196,6 +278,7 @@
                                         haifeng.wang.astro@gmail.com
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="https://orcid.org/0000-0001-8459-1036"
                                        target="_blank">
@@ -206,6 +289,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 2. Guan-Yu Wang -->
                         <article>
@@ -230,6 +314,7 @@
                                         guanyu.wang@studenti.unipd.it
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="https://orcid.org/0009-0001-2890-2538"
                                        target="_blank">
@@ -240,6 +325,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 3. Peng Yang -->
                         <article>
@@ -264,6 +350,7 @@
                                         yangpengastro@gmail.com
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="https://orcid.org/0009-0005-7565-2817"
                                        target="_blank">
@@ -274,6 +361,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 4. Martín López Corredoira -->
                         <article>
@@ -298,6 +386,7 @@
                                         martin@lopez-corredoira.com
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="https://orcid.org/0000-0001-6128-6274"
                                        target="_blank">
@@ -308,6 +397,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 5. Qi-Da Li -->
                         <article>
@@ -332,6 +422,7 @@
                                         liqida22@mails.ucas.ac.cn
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="https://orcid.org/0009-0005-2965-9276"
                                        target="_blank">
@@ -342,6 +433,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 6. Yong-Jun Jiao -->
                         <article>
@@ -366,6 +458,7 @@
                                         jiaoyongjun@tsinghua.edu.cn
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="https://orcid.org/0000-0003-2637-277X"
                                        target="_blank">
@@ -376,6 +469,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 7. Guo-Jun Cheng -->
                         <article>
@@ -403,6 +497,7 @@
                             </ul>
                         </article>
 
+
                         <!-- 8. Yang-Jun Shi -->
                         <article>
                             <img class="member-photo"
@@ -426,6 +521,7 @@
                                         syjunxy@gmail.com
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="https://orcid.org/0009-0007-8857-7371"
                                        target="_blank">
@@ -436,6 +532,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 9. Chang-Ping Li -->
                         <article>
@@ -463,6 +560,7 @@
                             </ul>
                         </article>
 
+
                         <!-- 10. Xiao-Peng Liu -->
                         <article>
                             <img class="member-photo"
@@ -486,6 +584,7 @@
                                         lxp@stu.hebtu.edu.cn
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="https://orcid.org/0009-0005-1184-2224"
                                        target="_blank">
@@ -496,6 +595,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 11. Yu-Zheng Wang -->
                         <article>
@@ -523,6 +623,7 @@
                             </ul>
                         </article>
 
+
                         <!-- 12. Xiao-Yue Zhou -->
                         <article>
                             <img class="member-photo"
@@ -548,6 +649,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 13. Gui-Mei Liu -->
                         <article>
@@ -575,6 +677,7 @@
                             </ul>
                         </article>
 
+
                         <!-- 14. Pei-Bin Chen -->
                         <article>
                             <img class="member-photo"
@@ -600,6 +703,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 15. Xiang Luo -->
                         <article>
@@ -627,6 +731,7 @@
                             </ul>
                         </article>
 
+
                         <!-- 16. Yan Jiang -->
                         <article>
                             <img class="member-photo"
@@ -652,6 +757,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 17. Min Dai -->
                         <article>
@@ -679,6 +785,7 @@
                             </ul>
                         </article>
 
+
                         <!-- 18. Shi-Qi Zhou -->
                         <article>
                             <img class="member-photo"
@@ -704,6 +811,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 19. Yunchuan Xiang -->
                         <article>
@@ -731,6 +839,7 @@
                             </ul>
                         </article>
 
+
                         <!-- 20. Qingshun Hu -->
                         <article>
                             <img class="member-photo"
@@ -757,6 +866,7 @@
                             </ul>
                         </article>
 
+
                         <!-- 21. Fan Wang -->
                         <article>
                             <img class="member-photo"
@@ -782,6 +892,7 @@
                                 </li>
                             </ul>
                         </article>
+
 
                         <!-- 22. Lin Lan -->
                         <article>
@@ -839,6 +950,7 @@
                                     giovanni.carraro@unipd.it
                                 </a>
                             </li>
+
                             <li>
                                 <a href="https://orcid.org/0000-0002-0155-9434"
                                    target="_blank">
@@ -852,8 +964,10 @@
                     -->
 
                 </section>
+
             </div>
         </div>
+
 
         <!-- Sidebar -->
         <div id="sidebar">
@@ -861,11 +975,13 @@
 
                 <!-- Menu -->
                 <nav id="menu">
+
                     <header class="major">
                         <h2>Menu</h2>
                     </header>
 
                     <ul>
+
                         <li>
                             <a href="index.html">Homepage</a>
                         </li>
@@ -878,41 +994,49 @@
                             <span class="opener">MWLUDPSG Programs</span>
 
                             <ul>
+
                                 <li>
                                     <a href="paper.html#press">
                                         MWLUDPSG-BPSG
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="paper.html#press">
                                         MWLUDPSG-GS3Hunter
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="paper.html#press">
                                         MWLUDPSG-SASG
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="paper.html#press">
                                         MWLUDPSG-DPSG-MSL
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="paper.html#press">
                                         MWLUDPSG-DwarfGC
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="paper.html#press">
                                         MWLUDPSG-M31
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="paper.html#press">
                                         MWLUDPSG-DiskGalaxies
                                     </a>
                                 </li>
+
                             </ul>
                         </li>
 
@@ -923,22 +1047,31 @@
                         <li>
                             <a href="contact_us.html">Contact Us</a>
                         </li>
+
                     </ul>
+
                 </nav>
+
 
                 <!-- Footer -->
                 <footer id="footer">
+
                     <p class="copyright">
+
                         &copy; Untitled. All rights reserved.
+
                         Design:
                         <a href="https://html5up.net">HTML5 UP</a>.
+
                     </p>
+
                 </footer>
 
             </div>
         </div>
 
     </div>
+
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
