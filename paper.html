@@ -11,43 +11,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 
+    <!-- 顶部实验室名称样式 -->
     <style>
-        /* 只用于顶部网站标题 */
-        #header .site-title {
-            display: block;
+        #header .logo.site-title {
+            display: inline-block;
+            border-bottom: 0;
             text-decoration: none;
-            line-height: 1.2;
+
+            /* 两行标题统一字体 */
+            font-family: "Roboto Slab", Georgia, serif;
+            font-size: 1.05em;
+            font-weight: 600;
+            line-height: 1.45;
+            letter-spacing: 0;
         }
 
-        #header .site-title .institute-name {
+        #header .site-title-line {
             display: block;
-            color: #f04b23;
-            font-size: 1.25em;
-            font-weight: bold;
-            line-height: 1.2;
-            margin-bottom: 0.25em;
+
+            /* 两行完全继承相同字体设置 */
+            font-family: inherit;
+            font-size: 1em;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+
+            /* 正常电脑页面保持一行，因此总共两行 */
             white-space: nowrap;
         }
 
-        #header .site-title .lab-name {
-            display: block;
+        /* 第一行 */
+        #header .institute-title {
+            color: #d5232f;
+        }
+
+        /* 第二行 */
+        #header .lab-title {
             color: #2c4f7c;
-            font-size: 0.95em;
-            font-weight: bold;
-            line-height: 1.2;
-            white-space: nowrap;
         }
 
+        /* 小屏幕下避免文字超出屏幕 */
         @media screen and (max-width: 736px) {
-            #header .site-title .institute-name {
-                font-size: 1.05em;
+            #header .logo.site-title {
+                font-size: 0.85em;
             }
 
-            #header .site-title .lab-name {
-                font-size: 0.82em;
+            #header .site-title-line {
+                white-space: normal;
             }
         }
     </style>
+
 </head>
 
 <body class="is-preload">
@@ -61,24 +75,32 @@
 
                 <!-- Header -->
                 <header id="header">
+
                     <a href="index.html" class="logo site-title">
-                        <span class="institute-name">
+
+                        <span class="site-title-line institute-title">
                             LuoxiaHong Institute of Astronomy (LXHIoA)
                         </span>
-                        <span class="lab-name">
+
+                        <span class="site-title-line lab-title">
                             Local Universe and Time Domain Astronomy Laboratory (LUTDLab)
                         </span>
+
                     </a>
+
                 </header>
 
                 <!-- Content -->
                 <section>
+
                     <!--<header class="main">
-                    <h1>Paper</h1>
-                </header>-->
+                        <h1>Paper</h1>
+                    </header>-->
+
                     <h2>Paper</h2>
 
                     <div class="paper-list">
+
                         <!-- Paper 1 -->
                         <article class="paper">
                             <p>
@@ -96,7 +118,11 @@
 
                         <!-- Paper 2 -->
                         <article class="paper">
-                            <p><b>Age Determination of LAMOST Red Giant Branch stars based on the Gradient Boosting Decision Tree method</b></p>
+                            <p>
+                                <b>
+                                    Age Determination of LAMOST Red Giant Branch stars based on the Gradient Boosting Decision Tree method
+                                </b>
+                            </p>
                             <p>
                                 Hai-Feng Wang; Giovanni Carraro; Xin Li; Qi-Da Li; Lorenzo Spina; Li Chen; Guan-Yu Wang; Li-Cai Deng. The Astrophysical Journal, 967, 1, 37.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad3b90" target="_blank" class="doi-link">
@@ -107,9 +133,13 @@
 
                         <!-- Paper 3 -->
                         <article class="paper">
-                            <p><b>Galactic-Seismology Substructures and Streams Hunter with LAMOST and Gaia. I. Methodology and Local Halo Results</b></p>
                             <p>
-                                Guan-Yu Wang ; Hai-Feng Wang; Yang-Ping Luo; Yuan-Sen Ting; Thor Tepper-García; Joss Bland-Hawthorn; Jeffrey Carlin. The Astrophysical Journal, 974, 2, 219.
+                                <b>
+                                    Galactic-Seismology Substructures and Streams Hunter with LAMOST and Gaia. I. Methodology and Local Halo Results
+                                </b>
+                            </p>
+                            <p>
+                                Guan-Yu Wang; Hai-Feng Wang; Yang-Ping Luo; Yuan-Sen Ting; Thor Tepper-García; Joss Bland-Hawthorn; Jeffrey Carlin. The Astrophysical Journal, 974, 2, 219.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad6d59" target="_blank" class="doi-link">
                                     <img src="https://img.icons8.com/ios-glyphs/20/000000/link.png" alt="link" />
                                 </a>
@@ -118,7 +148,11 @@
 
                         <!-- Paper 4 -->
                         <article class="paper">
-                            <p><b>Asymmetric Drift Map of the Milky Way disk Populations between 8−16 kpc with LAMOST and Gaia datasets</b></p>
+                            <p>
+                                <b>
+                                    Asymmetric Drift Map of the Milky Way disk Populations between 8−16 kpc with LAMOST and Gaia datasets
+                                </b>
+                            </p>
                             <p>
                                 Xin Li; Peng Yang; Hai-Feng Wang; Qing Li; Yang-Ping Luo; Zhi-Quan Luo; Guan-Yu Wang. The Open Journal of Astrophysics, 7, 37.
                                 <a href="https://astro.theoj.org/article/117594-asymmetric-drift-map-of-the-milky-way-disk-populations-between-8-16-kpc-with-lamost-and-gaia-datasets" target="_blank" class="doi-link">
@@ -129,7 +163,11 @@
 
                         <!-- Paper 5 -->
                         <article class="paper">
-                            <p><b>Detection of the Keplerian decline in the Milky Way rotation curve</b></p>
+                            <p>
+                                <b>
+                                    Detection of the Keplerian decline in the Milky Way rotation curve
+                                </b>
+                            </p>
                             <p>
                                 Y.-J. Jiao; F. Hammer; H.-F. Wang; J.-L. Wang; P. Amram; L. Chemin; Y.-B. Yang. Astronomy & Astrophysics, 678, A208.
                                 <a href="https://www.aanda.org/articles/aa/full_html/2023/10/aa47513-23/aa47513-23.html" target="_blank" class="doi-link">
@@ -140,7 +178,11 @@
 
                         <!-- Paper 6 -->
                         <article class="paper">
-                            <p><b>Kinematic-chemical Analysis and Time Tagging for the Diagonal Ridge Structure of the Galactic Outer Disk with LAMOST Red-giant Branch Stars</b></p>
+                            <p>
+                                <b>
+                                    Kinematic-chemical Analysis and Time Tagging for the Diagonal Ridge Structure of the Galactic Outer Disk with LAMOST Red-giant Branch Stars
+                                </b>
+                            </p>
                             <p>
                                 Peng Yang; Hai-Feng Wang; Zhi-Quan Luo; Thor Tepper-García; Yang-Ping Luo. The Astronomical Journal, 165, 3, 110.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-3881/acae84" target="_blank" class="doi-link">
@@ -151,7 +193,11 @@
 
                         <!-- Paper 7 -->
                         <article class="paper">
-                            <p><b>Evidence for Population-dependent Vertical Motions and the Long-lived Nonsteady Lopsided Milky Way Warp</b></p>
+                            <p>
+                                <b>
+                                    Evidence for Population-dependent Vertical Motions and the Long-lived Nonsteady Lopsided Milky Way Warp
+                                </b>
+                            </p>
                             <p>
                                 Xiang Li; Hai-Feng Wang; Yang-Ping Luo; Martín López-Corredoira; Yuan-Sen Ting; Žofia Chrobáková. The Astrophysical Journal, 943, 2, 88.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-4357/acab5b" target="_blank" class="doi-link">
@@ -162,7 +208,11 @@
 
                         <!-- Paper 8 -->
                         <article class="paper">
-                            <p><b>The accretion history of the Milky Way – I. How it shapes globular clusters and dwarf galaxies</b></p>
+                            <p>
+                                <b>
+                                    The accretion history of the Milky Way – I. How it shapes globular clusters and dwarf galaxies
+                                </b>
+                            </p>
                             <p>
                                 Francois Hammer; Hefan Li; Gary A Mamon; Marcel S Pawlowski; Piercarlo Bonifacio; Yongjun Jiao; Haifeng Wang; Jianling Wang; Yanbin Yang. Monthly Notices of the Royal Astronomical Society, 519, 4, 5059.
                                 <a href="https://academic.oup.com/mnras/article/519/4/5059/7000207" target="_blank" class="doi-link">
@@ -171,9 +221,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 9-->
+                        <!-- Paper 9 -->
                         <article class="paper">
-                            <p><b>Mapping the Milky Way Disk with Gaia DR3: 3D Extended Kinematic Maps and Rotation Curve to ≈30 kpc</b></p>
+                            <p>
+                                <b>
+                                    Mapping the Milky Way Disk with Gaia DR3: 3D Extended Kinematic Maps and Rotation Curve to ≈30 kpc
+                                </b>
+                            </p>
                             <p>
                                 Hai-Feng Wang; Žofia Chrobáková; Martín López-Corredoira; Francesco Sylos Labini. The Astrophysical Journal, 942, 12.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-4357/aca27c" target="_blank" class="doi-link">
@@ -182,9 +236,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 10-->
+                        <!-- Paper 10 -->
                         <article class="paper">
-                            <p><b>The Dark Matter Tidal Stripping History of the Sagittarius Core with N-body Simulations</b></p>
+                            <p>
+                                <b>
+                                    The Dark Matter Tidal Stripping History of the Sagittarius Core with N-body Simulations
+                                </b>
+                            </p>
                             <p>
                                 Hai-Feng Wang; Francois Hammer; Yan-Bin Yang; Jian-Ling Wang. The Astrophysical Journal Letters, 940, L3.
                                 <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ac9ccf" target="_blank" class="doi-link">
@@ -193,9 +251,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 11-->
+                        <!-- Paper 11 -->
                         <article class="paper">
-                            <p><b>Mass and Age Determination of the LAMOST Data with Different Machine-learning Methods</b></p>
+                            <p>
+                                <b>
+                                    Mass and Age Determination of the LAMOST Data with Different Machine-learning Methods
+                                </b>
+                            </p>
                             <p>
                                 Qi-Da Li; Hai-Feng Wang; Yangping Luo; Qing Li; Li-Cai Deng; Yuan-Sen Ting. The Astrophysical Journal Supplement Series, 262, 20.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-4365/ac81be" target="_blank" class="doi-link">
@@ -204,9 +266,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 12-->
+                        <!-- Paper 12 -->
                         <article class="paper">
-                            <p><b>The Flare and Warp of the Young Stellar Disk Traced with LAMOST DR5 OB-type Stars</b></p>
+                            <p>
+                                <b>
+                                    The Flare and Warp of the Young Stellar Disk Traced with LAMOST DR5 OB-type Stars
+                                </b>
+                            </p>
                             <p>
                                 Yang Yu; Hai-Feng Wang; Wen-Yuan Cui; Lin-Lin Li; Chao Liu; Bo Zhang; Hao Tian; Zhen-Yan Huo; Jie Ju; Zhi-Cun Liu et al. The Astrophysical Journal, 922, 80.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ac1e91" target="_blank" class="doi-link">
@@ -215,9 +281,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 13-->
+                        <!-- Paper 13 -->
                         <article class="paper">
-                            <p><b>Superflares, Chromospheric Activities, and Photometric Variabilities of Solar-type Stars from the Second-year Observation of TESS and Spectra of LAMOST</b></p>
+                            <p>
+                                <b>
+                                    Superflares, Chromospheric Activities, and Photometric Variabilities of Solar-type Stars from the Second-year Observation of TESS and Spectra of LAMOST
+                                </b>
+                            </p>
                             <p>
                                 Zuo-Lin Tu; Ming Yang; H.-F. Wang; F. Y. Wang. The Astrophysical Journal Supplement Series, 253, 35.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-4365/abda3c" target="_blank" class="doi-link">
@@ -226,9 +296,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 14-->
+                        <!-- Paper 14 -->
                         <article class="paper">
-                            <p><b>Mapping the Galactic Disk with the LAMOST and Gaia Red Clump Sample. V. On the Origin of the “Young” [a/Fe]-enhanced Stars</b></p>
+                            <p>
+                                <b>
+                                    Mapping the Galactic Disk with the LAMOST and Gaia Red Clump Sample. V. On the Origin of the “Young” [a/Fe]-enhanced Stars
+                                </b>
+                            </p>
                             <p>
                                 W.-X. Sun; Yang Huang; Hai-Feng Wang; C. Wang; M. Zhang; B.-Q. Chen; Huawei Zhang; D.-D. Wei; D.-K. Jiang; Xiaowei Liu. The Astrophysical Journal, 903, 12.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-4357/abb1b7" target="_blank" class="doi-link">
@@ -237,9 +311,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 15-->
+                        <!-- Paper 15 -->
                         <article class="paper">
-                            <p><b>Diagonal Ridge Pattern of Different Age Populations Found in Gaia-DR2 with LAMOST Main-sequence Turnoff and OB-type Stars</b></p>
+                            <p>
+                                <b>
+                                    Diagonal Ridge Pattern of Different Age Populations Found in Gaia-DR2 with LAMOST Main-sequence Turnoff and OB-type Stars
+                                </b>
+                            </p>
                             <p>
                                 H.-F. Wang; Y. Huang; H.-W. Zhang; M. López-Corredoira; W.-Y. Cui; B.-Q. Chen; R. Guo; J. Chang. The Astrophysical Journal, 902, 70.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-4357/abb3c8" target="_blank" class="doi-link">
@@ -248,9 +326,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 16-->
+                        <!-- Paper 16 -->
                         <article class="paper">
-                            <p><b>Gaia DR2 extended kinematical maps III. Rotation curves analysis, dark matter, and MOND tests</b></p>
+                            <p>
+                                <b>
+                                    Gaia DR2 extended kinematical maps III. Rotation curves analysis, dark matter, and MOND tests
+                                </b>
+                            </p>
                             <p>
                                 Ž. Chrobáková; M. López-Corredoira; F. Sylos Labini; H.-F. Wang; R. Nagy. Astronomy & Astrophysics, 902, 70.
                                 <a href="https://www.aanda.org/articles/aa/full_html/2020/10/aa38736-20/aa38736-20.html" target="_blank" class="doi-link">
@@ -259,9 +341,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 17-->
+                        <!-- Paper 17 -->
                         <article class="paper">
-                            <p><b>Mapping the Galactic Disk with the LAMOST and Gaia Red Clump Sample. VI. Evidence for the Long-lived Nonsteady Warp of Nongravitational Scenarios</b></p>
+                            <p>
+                                <b>
+                                    Mapping the Galactic Disk with the LAMOST and Gaia Red Clump Sample. VI. Evidence for the Long-lived Nonsteady Warp of Nongravitational Scenarios
+                                </b>
+                            </p>
                             <p>
                                 H.-F. Wang; M. López-Corredoira; Y. Huang; J. Chang; H.-W. Zhang; J. L. Carlin; X.-D. Chen; Ž. Chrobáková; B.-Q. Chen. The Astrophysical Journal, 897, 119.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab93ad" target="_blank" class="doi-link">
@@ -270,9 +356,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 18-->
+                        <!-- Paper 18 -->
                         <article class="paper">
-                            <p><b>Gaia-DR2 extended kinematical maps II. Dynamics in the Galactic disk explaining radial and vertical velocities</b></p>
+                            <p>
+                                <b>
+                                    Gaia-DR2 extended kinematical maps II. Dynamics in the Galactic disk explaining radial and vertical velocities
+                                </b>
+                            </p>
                             <p>
                                 M. López-Corredoira; F. Garzón; H.-F. Wang; F. Sylos Labini; R. Nagy; Ž. Chrobáková; J. Chang; B. Villarroel. Astronomy & Astrophysics, 634, A66.
                                 <a href="https://www.aanda.org/articles/aa/full_html/2020/02/aa36711-19/aa36711-19.html" target="_blank" class="doi-link">
@@ -281,9 +371,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 19-->
+                        <!-- Paper 19 -->
                         <article class="paper">
-                            <p><b>Mapping the Galactic disc with the LAMOST and Gaia red clump sample: II. 3D asymmetrical kinematics of mono-age populations in the disc between 6–14 kpc</b></p>
+                            <p>
+                                <b>
+                                    Mapping the Galactic disc with the LAMOST and Gaia red clump sample: II. 3D asymmetrical kinematics of mono-age populations in the disc between 6–14 kpc
+                                </b>
+                            </p>
                             <p>
                                 H-F Wang; M López-Corredoira; Y Huang; J L Carlin; B-Q Chen; C Wang; J Chang; H-W Zhang; M-S Xiang; H-B Yuan et al. Monthly Notices of the Royal Astronomical Society, 491, 2, 2104.
                                 <a href="https://academic.oup.com/mnras/article/491/2/2104/5614498" target="_blank" class="doi-link">
@@ -292,9 +386,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 20-->
+                        <!-- Paper 20 -->
                         <article class="paper">
-                            <p><b>Mapping the Galactic Disk with the LAMOST and Gaia Red Clump Sample. III. A New Velocity Substructure and Time Stamps of the Galactic Disk Asymmetry in the Disk between 12 and 15 kpc</b></p>
+                            <p>
+                                <b>
+                                    Mapping the Galactic Disk with the LAMOST and Gaia Red Clump Sample. III. A New Velocity Substructure and Time Stamps of the Galactic Disk Asymmetry in the Disk between 12 and 15 kpc
+                                </b>
+                            </p>
                             <p>
                                 Hai-Feng Wang; Jeffrey Carlin; Y. Huang; Martíin López-Corredoira; B.-Q. Chen; C. Wang; J. Chang; H.-W. Zhang; M.-S. Xiang; H.-B. Yuan et al. The Astrophysical Journal, 884, 135.
                                 <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab4204" target="_blank" class="doi-link">
@@ -303,9 +401,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 21-->
+                        <!-- Paper 21 -->
                         <article class="paper">
-                            <p><b>Mapping the Milky Way with LAMOST– III. Complicated spatial structure in the outer disc</b></p>
+                            <p>
+                                <b>
+                                    Mapping the Milky Way with LAMOST– III. Complicated spatial structure in the outer disc
+                                </b>
+                            </p>
                             <p>
                                 Hai-Feng Wang; Chao Liu; Yan Xu; Jun-Chen Wan; Licai Deng. Monthly Notices of the Royal Astronomical Society, 478, 3, 3367.
                                 <a href="https://academic.oup.com/mnras/article/478/3/3367/5040599" target="_blank" class="doi-link">
@@ -314,9 +416,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 22-->
+                        <!-- Paper 22 -->
                         <article class="paper">
-                            <p><b>3D Asymmetrical motions of the Galactic outer disc with LAMOST K giant stars</b></p>
+                            <p>
+                                <b>
+                                    3D Asymmetrical motions of the Galactic outer disc with LAMOST K giant stars
+                                </b>
+                            </p>
                             <p>
                                 Haifeng Wang; Martín López-Corredoira; Jeffrey L Carlin; Licai Deng. Monthly Notices of the Royal Astronomical Society, 477, 3, 2858.
                                 <a href="https://academic.oup.com/mnras/article/477/3/2858/4950619" target="_blank" class="doi-link">
@@ -325,9 +431,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 23-->
+                        <!-- Paper 23 -->
                         <article class="paper">
-                            <p><b>Disk stars in the Milky Way detected beyond 25 kpc from its center</b></p>
+                            <p>
+                                <b>
+                                    Disk stars in the Milky Way detected beyond 25 kpc from its center
+                                </b>
+                            </p>
                             <p>
                                 M. López-Corredoira; C. Allende Prieto; F. Garzón; H. Wang; C. Liu; L. Deng. Astronomy & Astrophysics, 612, L8.
                                 <a href="https://www.aanda.org/articles/aa/full_html/2018/04/aa32880-18/aa32880-18.html" target="_blank" class="doi-link">
@@ -336,9 +446,13 @@
                             </p>
                         </article>
 
-                        <!-- Paper 24-->
+                        <!-- Paper 24 -->
                         <article class="paper">
-                            <p><b>Rediscovering the Galactic outer disk with LAMOST data</b></p>
+                            <p>
+                                <b>
+                                    Rediscovering the Galactic outer disk with LAMOST data
+                                </b>
+                            </p>
                             <p>
                                 Chao Liu; Yan Xu; Haifeng Wang; Junchen Wan. Proceedings of the International Astronomical Union, 334, 109.
                                 <a href="https://www.cambridge.org/core/journals/proceedings-of-the-international-astronomical-union/article/rediscovering-the-galactic-outer-disk-with-lamost-data/573B7682587166F10308DCAA41D708CF" target="_blank" class="doi-link">
@@ -351,23 +465,55 @@
 
                 </section>
 
+                <!-- Press -->
                 <section id="press">
+
                     <h2>Press</h2>
 
-                    <p><b>"The new AI StellarStream algorithm: Artificial intelligence helps astronomers uncover more mysteries of the Milky Way" </b><a href="https://tidenews.com.cn/news.html?id=2876425" target="_blank" class="doi-link"><img src="https://img.icons8.com/ios-glyphs/20/000000/link.png" alt="link" /></a></p>
+                    <p>
+                        <b>
+                            "The new AI StellarStream algorithm: Artificial intelligence helps astronomers uncover more mysteries of the Milky Way"
+                        </b>
+                        <a href="https://tidenews.com.cn/news.html?id=2876425" target="_blank" class="doi-link">
+                            <img src="https://img.icons8.com/ios-glyphs/20/000000/link.png" alt="link" />
+                        </a>
+                    </p>
 
-                    <p><b>"Echoes from the Galactic Center: Reconstructing the Origin and Early Evolution of the Milky Way Bulge based on Gaia Data" </b><a href="https://mp.weixin.qq.com/s/h8GI8EM3y1XFxztyEdsGwQ" target="_blank" class="doi-link"><img src="https://img.icons8.com/ios-glyphs/20/000000/link.png" alt="link" /></a></p>
+                    <p>
+                        <b>
+                            "Echoes from the Galactic Center: Reconstructing the Origin and Early Evolution of the Milky Way Bulge based on Gaia Data"
+                        </b>
+                        <a href="https://mp.weixin.qq.com/s/h8GI8EM3y1XFxztyEdsGwQ" target="_blank" class="doi-link">
+                            <img src="https://img.icons8.com/ios-glyphs/20/000000/link.png" alt="link" />
+                        </a>
+                    </p>
 
-                    <p><b>Dark Matter Exploration in the Milky Way and the Andromeda Galaxy</b><a href="https://mp.weixin.qq.com/s/g81Yeqen7gAjuWkfDQ5OpA" target="_blank" class="doi-link"><img src="https://img.icons8.com/ios-glyphs/20/000000/link.png" alt="link" /></a></p>
+                    <p>
+                        <b>
+                            Dark Matter Exploration in the Milky Way and the Andromeda Galaxy
+                        </b>
+                        <a href="https://mp.weixin.qq.com/s/g81Yeqen7gAjuWkfDQ5OpA" target="_blank" class="doi-link">
+                            <img src="https://img.icons8.com/ios-glyphs/20/000000/link.png" alt="link" />
+                        </a>
+                    </p>
 
-                    <p><b>Sky Mapping of Multi-Population Asymmetric Drift in the Outer Galactic Disk Based on LAMOST Survey Data</b><a href="https://mp.weixin.qq.com/s/VLy9CeAyvoYbema7pZ_glA" target="_blank" class="doi-link"><img src="https://img.icons8.com/ios-glyphs/20/000000/link.png" alt="link" /></a></p>
+                    <p>
+                        <b>
+                            Sky Mapping of Multi-Population Asymmetric Drift in the Outer Galactic Disk Based on LAMOST Survey Data
+                        </b>
+                        <a href="https://mp.weixin.qq.com/s/VLy9CeAyvoYbema7pZ_glA" target="_blank" class="doi-link">
+                            <img src="https://img.icons8.com/ios-glyphs/20/000000/link.png" alt="link" />
+                        </a>
+                    </p>
 
                 </section>
 
             </div>
         </div>
 
+        <!-- Paper animation style -->
         <style>
+
             .paper-list {
                 display: flex;
                 flex-direction: column;
@@ -393,77 +539,169 @@
                 vertical-align: middle;
                 margin-left: 0.3em;
             }
+
         </style>
 
+        <!-- Paper scroll animation -->
         <script>
-            // Scroll animation using IntersectionObserver
+
             const papers = document.querySelectorAll('.paper');
 
             const observer = new IntersectionObserver((entries) => {
+
                 entries.forEach(entry => {
+
                     if (entry.isIntersecting) {
                         entry.target.classList.add('show');
                     }
+
                 });
-            }, { threshold: 0.1 });
+
+            }, {
+                threshold: 0.1
+            });
 
             papers.forEach(paper => observer.observe(paper));
+
         </script>
 
-        <!--roll motion-->
+        <!-- Roll motion -->
         <script>
+
             document.addEventListener('DOMContentLoaded', function () {
+
                 const hash = window.location.hash;
+
                 if (hash) {
+
                     const target = document.querySelector(hash);
+
                     if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
                     }
+
                 }
+
             });
+
         </script>
 
         <!-- Sidebar -->
         <div id="sidebar">
+
             <div class="inner">
 
                 <!-- Menu -->
                 <nav id="menu">
+
                     <header class="major">
                         <h2>Menu</h2>
                     </header>
-                    <ul>
-                        <li><a href="index.html">Homepage</a></li>
-                        <!--<li><a href="about.html">About</a></li>-->
-                        <li><a href="group_members.html">Group Members</a></li>
-                        <li>
-                            <span class="opener">MWLUDPSG Programs</span>
-                            <ul>
-                                <!--<li><a href="MWLUDPSG-BPSG.html">MWLUDPSG-BPSG</a></li>
-    <li><a href="MWLUDPSG-GS3Hunter.html">MWLUDPSG-GS3Hunter</a></li>
-    <li><a href="MWLUDPSG-SASG.html">MWLUDPSG-SASG</a></li>
-    <li><a href="MWLUDPSG-DPSG-D.html">MWLUDPSG-DPSG-D</a></li>-->
 
-                                <li><a href="paper.html#press">MWLUDPSG-BPSG</a></li>
-                                <li><a href="paper.html#press">MWLUDPSG-GS3Hunter</a></li>
-                                <li><a href="paper.html#press">MWLUDPSG-SASG</a></li>
-                                <li><a href="paper.html#press">MWLUDPSG-DPSG-MSL</a></li>
-                                <li><a href="paper.html#press">MWLUDPSG-DwarfGC</a></li>
-                                <li><a href="paper.html#press">MWLUDPSG-M31</a></li>
-                                <li><a href="paper.html#press">MWLUDPSG-DiskGalaxies</a></li>
-                            </ul>
+                    <ul>
+
+                        <li>
+                            <a href="index.html">Homepage</a>
                         </li>
-                        <li><a href="paper.html">Progress</a></li>
-                        <li><a href="contact_us.html">Contact Us</a></li>
+
+                        <!--<li><a href="about.html">About</a></li>-->
+
+                        <li>
+                            <a href="group_members.html">Group Members</a>
+                        </li>
+
+                        <li>
+
+                            <span class="opener">
+                                MWLUDPSG Programs
+                            </span>
+
+                            <ul>
+
+                                <!--<li><a href="MWLUDPSG-BPSG.html">MWLUDPSG-BPSG</a></li>
+                                <li><a href="MWLUDPSG-GS3Hunter.html">MWLUDPSG-GS3Hunter</a></li>
+                                <li><a href="MWLUDPSG-SASG.html">MWLUDPSG-SASG</a></li>
+                                <li><a href="MWLUDPSG-DPSG-D.html">MWLUDPSG-DPSG-D</a></li>-->
+
+                                <li>
+                                    <a href="paper.html#press">
+                                        MWLUDPSG-BPSG
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="paper.html#press">
+                                        MWLUDPSG-GS3Hunter
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="paper.html#press">
+                                        MWLUDPSG-SASG
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="paper.html#press">
+                                        MWLUDPSG-DPSG-MSL
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="paper.html#press">
+                                        MWLUDPSG-DwarfGC
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="paper.html#press">
+                                        MWLUDPSG-M31
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="paper.html#press">
+                                        MWLUDPSG-DiskGalaxies
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>
+                            <a href="paper.html">
+                                Progress
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact_us.html">
+                                Contact Us
+                            </a>
+                        </li>
+
                     </ul>
+
                 </nav>
 
                 <!-- Footer -->
                 <footer id="footer">
-                    <p class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+
+                    <p class="copyright">
+                        &copy; Untitled. All rights reserved.
+                        Design:
+                        <a href="https://html5up.net">
+                            HTML5 UP
+                        </a>.
+                    </p>
+
                 </footer>
 
             </div>
+
         </div>
 
     </div>
