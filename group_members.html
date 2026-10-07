@@ -18,34 +18,43 @@
            ============================== */
 
         #header .site-title {
-            display: block;
+            display: inline-block;
             text-decoration: none;
             border: 0;
             padding: 0;
+
+            /* 两行标题统一字体、字号、粗细 */
+            font-family: "Roboto Slab", Georgia, serif;
+            font-size: 1.05em;
+            font-weight: 600;
+            line-height: 1.45;
+            letter-spacing: 0;
         }
 
-        /* 第一行：红色、无分号 */
-        #header .site-title .institute-name {
-            display: block;
-            margin: 0 0 0.15em 0;
-            color: #ef482b;
-            font-family: inherit;
-            font-size: 1.55em;
-            font-weight: 700;
-            line-height: 1.2;
-            white-space: nowrap;
-        }
-
-        /* 第二行：全部蓝色 */
+        /* 两行标题使用完全相同的字体设置 */
+        #header .site-title .institute-name,
         #header .site-title .lab-name {
             display: block;
             margin: 0;
-            color: #345484;
+
             font-family: inherit;
-            font-size: 1.30em;
-            font-weight: 600;
-            line-height: 1.2;
+            font-size: 1em;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+
             white-space: nowrap;
+        }
+
+        /* 第一行：红色 */
+        #header .site-title .institute-name {
+            color: #d5232f;
+            margin-bottom: 0.15em;
+        }
+
+        /* 第二行：蓝色 */
+        #header .site-title .lab-name {
+            color: #2c4f7c;
         }
 
         /* LUTDLab 与第二行完全相同 */
@@ -54,7 +63,6 @@
             font-family: inherit;
             font-size: inherit;
             font-weight: inherit;
-            white-space: nowrap;
         }
 
 
@@ -162,18 +170,22 @@
         }
 
 
-        /* 手机屏幕改为单列 */
+        /* ==============================
+           手机屏幕改为单列
+           ============================== */
 
         @media screen and (max-width: 736px) {
 
-            #header .site-title .institute-name {
-                font-size: 1.05em;
-                line-height: 1.2;
+            /* 两行标题手机端依然保持相同字体和字号 */
+            #header .site-title {
+                font-size: 0.85em;
             }
 
+            #header .site-title .institute-name,
             #header .site-title .lab-name {
-                font-size: 0.92em;
-                line-height: 1.2;
+                font-size: 1em;
+                line-height: 1.45;
+                white-space: normal;
             }
 
             #member-grid.posts {
