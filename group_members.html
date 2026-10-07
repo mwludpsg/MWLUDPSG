@@ -1,26 +1,17 @@
 <!DOCTYPE HTML>
-<!--
-    Editorial by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license
-    (html5up.net/license)
--->
 <html lang="en">
+
 <head>
     <title>Group Members</title>
     <meta charset="utf-8" />
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
-
-        /*
-         * =========================================================
-         * 网站顶部标题
-         * =========================================================
-         */
+        /* =========================
+           顶部实验室名称
+           ========================= */
 
         #header .site-title {
             display: block;
@@ -29,44 +20,43 @@
             padding: 0;
         }
 
-        /* 第一行：LuoxiaHong Institute of Astronomy (LXHIoA); */
+        /* 第一行：红色、楷体、加粗 */
         #header .site-title .institute-name {
             display: block;
-            margin: 0 0 0.15em 0;
+            margin: 0 0 8px 0;
             color: #ef482b;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 2.0em;
-            font-weight: 700;
-            line-height: 1.15;
+            font-family: "KaiTi", "楷体", "STKaiti", serif;
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.2;
+            white-space: nowrap;
         }
 
-        /* 第二行：Local Universe and Time Domain Astronomy Laboratory */
+        /* 第二行：全部保持蓝色 */
         #header .site-title .lab-name {
             display: block;
             margin: 0;
             color: #345484;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.8em;
-            font-weight: 600;
+            font-family: "KaiTi", "楷体", "STKaiti", serif;
+            font-size: 29px;
+            font-weight: normal;
             line-height: 1.2;
+            white-space: nowrap;
         }
 
-        /* 第二行最后的 (LUTDLab) */
+        /* LUTDLab 与第二行保持完全相同的颜色和字体 */
         #header .site-title .lab-short {
-            color: #ef482b;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.65em;
-            font-weight: 700;
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
             white-space: nowrap;
         }
 
 
-        /*
-         * =========================================================
-         * 成员列表：桌面两列。
-         * 同一行的卡片共享行高，避免后续成员出现错位。
-         * =========================================================
-         */
+        /* =========================
+           Group Members 布局
+           ========================= */
 
         #member-grid.posts {
             display: grid;
@@ -94,11 +84,6 @@
             border-top: 1px solid rgba(210, 215, 217, 0.75);
         }
 
-        /*
-         * 清除原模板生成的分隔线，
-         * 使用下面的统一边框规则。
-         */
-
         #member-grid.posts::before,
         #member-grid.posts::after,
         #member-grid.posts > article::before,
@@ -107,25 +92,16 @@
             display: none;
         }
 
-        /* 右侧一列的间距和中间分隔线 */
-
         #member-grid.posts > article:nth-child(even) {
             padding-right: 0;
             padding-left: 3em;
             border-left: 1px solid rgba(210, 215, 217, 0.75);
         }
 
-        /* 第一行不需要上方分隔线 */
-
         #member-grid.posts > article:nth-child(-n + 2) {
             padding-top: 0;
             border-top: 0;
         }
-
-        /*
-         * 所有照片统一占用 200 × 240 px 的区域。
-         * contain 保留完整照片，不拉伸、不裁切。
-         */
 
         #member-grid.posts > article > img.member-photo {
             display: block;
@@ -148,8 +124,6 @@
             overflow-wrap: anywhere;
         }
 
-        /* 同一行的邮箱按钮底部对齐 */
-
         #member-grid.posts > article > ul.actions {
             display: flex;
             flex-wrap: wrap;
@@ -167,8 +141,6 @@
             padding: 0;
         }
 
-        /* 较长的邮箱在窄屏下允许换行 */
-
         #member-grid.posts > article > ul.actions .button {
             box-sizing: border-box;
             max-width: 100%;
@@ -179,30 +151,27 @@
             overflow-wrap: anywhere;
         }
 
-        /* ORCID 图标不使用成员照片尺寸 */
-
         #member-grid.posts .orcid-icon {
             display: block;
             width: 16px;
             height: 16px;
         }
 
-        /* 手机屏幕改为单列 */
+
+        /* =========================
+           手机端
+           ========================= */
 
         @media screen and (max-width: 736px) {
 
             #header .site-title .institute-name {
-                font-size: 1.35em;
+                font-size: 22px;
                 line-height: 1.2;
             }
 
             #header .site-title .lab-name {
-                font-size: 1.15em;
-                line-height: 1.25;
-            }
-
-            #header .site-title .lab-short {
-                font-size: 0.65em;
+                font-size: 20px;
+                line-height: 1.2;
             }
 
             #member-grid.posts {
@@ -220,760 +189,1138 @@
                 border-top: 0;
             }
         }
-
     </style>
 </head>
 
+
 <body class="is-preload">
 
-    <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Main -->
+        <!-- =========================
+             主页面
+             ========================= -->
+
         <div id="main">
+
             <div class="inner">
 
-                <!-- Header -->
+                <!-- =========================
+                     顶部标题
+                     ========================= -->
+
                 <header id="header">
+
                     <a href="index.html" class="logo site-title">
 
+                        <!-- 第一行：红色，无分号 -->
                         <span class="institute-name">
-                            LuoxiaHong Institute of Astronomy (LXHIoA);
+                            LuoxiaHong Institute of Astronomy (LXHIoA)
                         </span>
 
+                        <!-- 第二行：全部蓝色 -->
                         <span class="lab-name">
                             Local Universe and Time Domain Astronomy Laboratory
                             <span class="lab-short">(LUTDLab)</span>
                         </span>
 
                     </a>
+
                 </header>
 
-                <!-- Group Members -->
+
+                <!-- =========================
+                     Group Members
+                     ========================= -->
+
                 <section>
+
                     <h2>Group Members</h2>
 
                     <div class="posts" id="member-grid">
 
-                        <!-- 1. Hai-Feng Wang -->
+
+                        <!-- =========================
+                             Hai-Feng Wang
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/HFW1.jpg"
-                                 alt="Hai-Feng Wang" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/HFW1.jpg"
+                                alt="Hai-Feng Wang"
+                            />
 
                             <h3>Hai-Feng Wang</h3>
 
                             <p>
-                                <b>Affiliation: Department of Astronomy, China West Normal University (Research Staff; Group Leader of Local Universe and Time-Domain Astronomy Laboratory)</b>
+                                <b>
+                                    Affiliation: Department of Astronomy, China West Normal University
+                                    (Research Staff; Group Leader of Local Universe and Time-Domain Astronomy Laboratory)
+                                </b>
                                 <br>
-                                <b>Research Topics: Milky Way and the Local Universe, with particular emphasis on galactic seismology, dynamics, archaeology, interstellar matter, disk systems, galaxy mergers, collisions and the nature of dark matter, using data analysis, modeling, and simulations.</b>
+
+                                <b>
+                                    Research Topics: Milky Way and the Local Universe, with particular emphasis on
+                                    galactic seismology, dynamics, archaeology, interstellar matter, disk systems,
+                                    galaxy mergers, collisions and the nature of dark matter, using data analysis,
+                                    modeling, and simulations.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:haifeng.wang.astro@gmail.com">
+                                    <a
+                                        class="button"
+                                        href="mailto:haifeng.wang.astro@gmail.com"
+                                    >
                                         haifeng.wang.astro@gmail.com
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://orcid.org/0000-0001-8459-1036"
-                                       target="_blank">
-                                        <img class="orcid-icon"
-                                             src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-                                             alt="ORCID" />
+                                    <a
+                                        href="https://orcid.org/0000-0001-8459-1036"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            class="orcid-icon"
+                                            src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+                                            alt="ORCID"
+                                        />
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 2. Guan-Yu Wang -->
+                        <!-- =========================
+                             Guan-Yu Wang
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/GYW.jpg"
-                                 alt="Guan-Yu Wang" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/GYW.jpg"
+                                alt="Guan-Yu Wang"
+                            />
 
                             <h3>Guan-Yu Wang</h3>
 
                             <p>
-                                <b>Affiliation: Dipartimento di Fisica e Astronomia ``Galileo Galilei", University of Podova (Ph.D. student)</b>
+                                <b>
+                                    Affiliation: Dipartimento di Fisica e Astronomia ``Galileo Galilei",
+                                    University of Podova (Ph.D. student)
+                                </b>
                                 <br>
-                                <b>Research Topics: Milky Way halo structure; Stellar streams &amp; substructures; Galactic assembly history; Dynamical evolution.</b>
+
+                                <b>
+                                    Research Topics: Milky Way halo structure; Stellar streams &amp; substructures;
+                                    Galactic assembly history; Dynamical evolution.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:guanyu.wang@studenti.unipd.it">
+                                    <a
+                                        class="button"
+                                        href="mailto:guanyu.wang@studenti.unipd.it"
+                                    >
                                         guanyu.wang@studenti.unipd.it
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://orcid.org/0009-0001-2890-2538"
-                                       target="_blank">
-                                        <img class="orcid-icon"
-                                             src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-                                             alt="ORCID" />
+                                    <a
+                                        href="https://orcid.org/0009-0001-2890-2538"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            class="orcid-icon"
+                                            src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+                                            alt="ORCID"
+                                        />
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 3. Peng Yang -->
+                        <!-- =========================
+                             Peng Yang
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/YP.png"
-                                 alt="Peng Yang" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/YP.png"
+                                alt="Peng Yang"
+                            />
 
                             <h3>Peng Yang</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Ph.D. student)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Ph.D. student)
+                                </b>
                                 <br>
-                                <b>Research Topics: Galactic seismology, dynamics, and disk structure analysis.</b>
+
+                                <b>
+                                    Research Topics: Galactic seismology, dynamics, and disk structure analysis.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:yangpengastro@gmail.com">
+                                    <a
+                                        class="button"
+                                        href="mailto:yangpengastro@gmail.com"
+                                    >
                                         yangpengastro@gmail.com
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://orcid.org/0009-0005-7565-2817"
-                                       target="_blank">
-                                        <img class="orcid-icon"
-                                             src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-                                             alt="ORCID" />
+                                    <a
+                                        href="https://orcid.org/0009-0005-7565-2817"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            class="orcid-icon"
+                                            src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+                                            alt="ORCID"
+                                        />
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 4. Martín López Corredoira -->
+                        <!-- =========================
+                             Martín López Corredoira
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/MLC.jpg"
-                                 alt="Martín López Corredoira" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/MLC.jpg"
+                                alt="Martín López Corredoira"
+                            />
 
                             <h3>Martín López Corredoira</h3>
 
                             <p>
-                                <b>Affiliation: Instituto de Astrofísica de Canarias, Canary Islands, Spain (Staff Researcher)</b>
+                                <b>
+                                    Affiliation: Instituto de Astrofísica de Canarias, Canary Islands, Spain
+                                    (Staff Researcher)
+                                </b>
                                 <br>
-                                <b>Research Topics: Milky Way and cosmology.</b>
+
+                                <b>
+                                    Research Topics: Milky Way and cosmology.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:martin@lopez-corredoira.com">
+                                    <a
+                                        class="button"
+                                        href="mailto:martin@lopez-corredoira.com"
+                                    >
                                         martin@lopez-corredoira.com
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://orcid.org/0000-0001-6128-6274"
-                                       target="_blank">
-                                        <img class="orcid-icon"
-                                             src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-                                             alt="ORCID" />
+                                    <a
+                                        href="https://orcid.org/0000-0001-6128-6274"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            class="orcid-icon"
+                                            src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+                                            alt="ORCID"
+                                        />
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 5. Qi-Da Li -->
+                        <!-- =========================
+                             Qi-Da Li
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/QDL.jpg"
-                                 alt="Qi-Da Li" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/QDL.jpg"
+                                alt="Qi-Da Li"
+                            />
 
                             <h3>Qi-Da Li</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Assistant Professor)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Assistant Professor)
+                                </b>
                                 <br>
-                                <b>Research Topics: Parameter measurement for large sample stars, the stellar initial mass function.</b>
+
+                                <b>
+                                    Research Topics: Parameter measurement for large sample stars,
+                                    the stellar initial mass function.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:liqida22@mails.ucas.ac.cn">
+                                    <a
+                                        class="button"
+                                        href="mailto:liqida22@mails.ucas.ac.cn"
+                                    >
                                         liqida22@mails.ucas.ac.cn
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://orcid.org/0009-0005-2965-9276"
-                                       target="_blank">
-                                        <img class="orcid-icon"
-                                             src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-                                             alt="ORCID" />
+                                    <a
+                                        href="https://orcid.org/0009-0005-2965-9276"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            class="orcid-icon"
+                                            src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+                                            alt="ORCID"
+                                        />
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 6. Yong-Jun Jiao -->
+                        <!-- =========================
+                             Yong-Jun Jiao
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/YJJ.png"
-                                 alt="Yong-Jun Jiao" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/YJJ.png"
+                                alt="Yong-Jun Jiao"
+                            />
 
                             <h3>Yong-Jun Jiao</h3>
 
                             <p>
-                                <b>Affiliation: Tsinghua University (Postdoctoral Researcher)</b>
+                                <b>
+                                    Affiliation: Tsinghua University (Postdoctoral Researcher)
+                                </b>
                                 <br>
-                                <b>Research Topics: Rotation Curves, Dark matter, Galaxy formation, FAST datasets.</b>
+
+                                <b>
+                                    Research Topics: Rotation Curves, Dark matter, Galaxy formation, FAST datasets.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:jiaoyongjun@tsinghua.edu.cn">
+                                    <a
+                                        class="button"
+                                        href="mailto:jiaoyongjun@tsinghua.edu.cn"
+                                    >
                                         jiaoyongjun@tsinghua.edu.cn
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://orcid.org/0000-0003-2637-277X"
-                                       target="_blank">
-                                        <img class="orcid-icon"
-                                             src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-                                             alt="ORCID" />
+                                    <a
+                                        href="https://orcid.org/0000-0003-2637-277X"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            class="orcid-icon"
+                                            src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+                                            alt="ORCID"
+                                        />
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 7. Guo-Jun Cheng -->
+                        <!-- =========================
+                             Guo-Jun Cheng
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/GJC.jpg"
-                                 alt="Guo-Jun Cheng" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/GJC.jpg"
+                                alt="Guo-Jun Cheng"
+                            />
 
                             <h3>Guo-Jun Cheng</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Master’s student)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Master’s student)
+                                </b>
                                 <br>
-                                <b>Research Topics: Milky Way bulge populations and dynamics.</b>
+
+                                <b>
+                                    Research Topics: Milky Way bulge populations and dynamics.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:chengguojunastro@gmail.com">
+                                    <a
+                                        class="button"
+                                        href="mailto:chengguojunastro@gmail.com"
+                                    >
                                         chengguojunastro@gmail.com
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 8. Yang-Jun Shi -->
+                        <!-- =========================
+                             Yang-Jun Shi
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/YJS.jpg"
-                                 alt="Yang-Jun Shi" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/YJS.jpg"
+                                alt="Yang-Jun Shi"
+                            />
 
                             <h3>Yang-Jun Shi</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Ph.D. student)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Ph.D. student)
+                                </b>
                                 <br>
-                                <b>Research Topics: Near-Field Cosmology; Cosmology; Dark Matter.</b>
+
+                                <b>
+                                    Research Topics: Near-Field Cosmology; Cosmology; Dark Matter.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:syjunxy@gmail.com">
+                                    <a
+                                        class="button"
+                                        href="mailto:syjunxy@gmail.com"
+                                    >
                                         syjunxy@gmail.com
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://orcid.org/0009-0007-8857-7371"
-                                       target="_blank">
-                                        <img class="orcid-icon"
-                                             src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-                                             alt="ORCID" />
+                                    <a
+                                        href="https://orcid.org/0009-0007-8857-7371"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            class="orcid-icon"
+                                            src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+                                            alt="ORCID"
+                                        />
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 9. Chang-Ping Li -->
+                        <!-- =========================
+                             Chang-Ping Li
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/CPL.jpg"
-                                 alt="Chang-Ping Li" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/CPL.jpg"
+                                alt="Chang-Ping Li"
+                            />
 
                             <h3>Chang-Ping Li</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Master’s student)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Master’s student)
+                                </b>
                                 <br>
-                                <b>Research Topics: Streams; Chemo-Dynamics of the Milky Way Halo; Dark Matter.</b>
+
+                                <b>
+                                    Research Topics: Streams; Chemo-Dynamics of the Milky Way Halo; Dark Matter.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:lcp912@outlook.com">
+                                    <a
+                                        class="button"
+                                        href="mailto:lcp912@outlook.com"
+                                    >
                                         lcp912@outlook.com
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 10. Xiao-Peng Liu -->
+                        <!-- =========================
+                             Xiao-Peng Liu
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/XPL.jpg"
-                                 alt="Xiao-Peng Liu" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/XPL.jpg"
+                                alt="Xiao-Peng Liu"
+                            />
 
                             <h3>Xiao-Peng Liu</h3>
 
                             <p>
-                                <b>Affiliation: Hebei Normal University (Ph.D. student)</b>
+                                <b>
+                                    Affiliation: Hebei Normal University (Ph.D. student)
+                                </b>
                                 <br>
-                                <b>Research Topics: Milky Way disk structure and kinematics; thin-disk density distribution and vertical asymmetries; outer-disk rotation curve based on LAMOST stellar tracers.</b>
+
+                                <b>
+                                    Research Topics: Milky Way disk structure and kinematics;
+                                    thin-disk density distribution and vertical asymmetries;
+                                    outer-disk rotation curve based on LAMOST stellar tracers.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:lxp@stu.hebtu.edu.cn">
+                                    <a
+                                        class="button"
+                                        href="mailto:lxp@stu.hebtu.edu.cn"
+                                    >
                                         lxp@stu.hebtu.edu.cn
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://orcid.org/0009-0005-1184-2224"
-                                       target="_blank">
-                                        <img class="orcid-icon"
-                                             src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-                                             alt="ORCID" />
+                                    <a
+                                        href="https://orcid.org/0009-0005-1184-2224"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            class="orcid-icon"
+                                            src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+                                            alt="ORCID"
+                                        />
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 11. Yu-Zheng Wang -->
+                        <!-- =========================
+                             Yu-Zheng Wang
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/YZW.jpg"
-                                 alt="Yu-Zheng Wang" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/YZW.jpg"
+                                alt="Yu-Zheng Wang"
+                            />
 
                             <h3>Yu-Zheng Wang</h3>
 
                             <p>
-                                <b>Affiliation: Hebei Normal University (Master’s student)</b>
+                                <b>
+                                    Affiliation: Hebei Normal University (Master’s student)
+                                </b>
                                 <br>
-                                <b>Research Topics: Structure and dynamics of the outer disk.</b>
+
+                                <b>
+                                    Research Topics: Structure and dynamics of the outer disk.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:swordzun@gmail.com">
+                                    <a
+                                        class="button"
+                                        href="mailto:swordzun@gmail.com"
+                                    >
                                         swordzun@gmail.com
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 12. Xiao-Yue Zhou -->
+                        <!-- =========================
+                             Xiao-Yue Zhou
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/XYZ.jpg"
-                                 alt="Xiao-Yue Zhou" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/XYZ.jpg"
+                                alt="Xiao-Yue Zhou"
+                            />
 
                             <h3>Xiao-Yue Zhou</h3>
 
                             <p>
-                                <b>Affiliation: National Astronomical Observatory of Chinese Academy of Sciences (Ph.D. student)</b>
+                                <b>
+                                    Affiliation: National Astronomical Observatory of Chinese Academy of Sciences
+                                    (Ph.D. student)
+                                </b>
                                 <br>
-                                <b>Research Topics: Disk Warps and Stellar Catalogs.</b>
+
+                                <b>
+                                    Research Topics: Disk Warps and Stellar Catalogs.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:zhouxy@bao.ac.cn">
+                                    <a
+                                        class="button"
+                                        href="mailto:zhouxy@bao.ac.cn"
+                                    >
                                         zhouxy@bao.ac.cn
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 13. Gui-Mei Liu -->
+                        <!-- =========================
+                             Gui-Mei Liu
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/GML.jpg"
-                                 alt="Gui-Mei Liu" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/GML.jpg"
+                                alt="Gui-Mei Liu"
+                            />
 
                             <h3>Gui-Mei Liu</h3>
 
                             <p>
-                                <b>Affiliation: Xinjiang Astronomical Observatory &amp; University of Vienna (Ph.D. student)</b>
+                                <b>
+                                    Affiliation: Xinjiang Astronomical Observatory &amp; University of Vienna
+                                    (Ph.D. student)
+                                </b>
                                 <br>
-                                <b>Research Topics: Star Clusters and dynamics.</b>
+
+                                <b>
+                                    Research Topics: Star Clusters and dynamics.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:liugm76@gmail.com">
+                                    <a
+                                        class="button"
+                                        href="mailto:liugm76@gmail.com"
+                                    >
                                         liugm76@gmail.com
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 14. Pei-Bin Chen -->
+                        <!-- =========================
+                             Pei-Bin Chen
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/PBC.png"
-                                 alt="Pei-Bin Chen" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/PBC.png"
+                                alt="Pei-Bin Chen"
+                            />
 
                             <h3>Pei-Bin Chen</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Assistant Professor)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Assistant Professor)
+                                </b>
                                 <br>
-                                <b>Research Topics: Dwarf galaxy, AGN, Star Formation.</b>
+
+                                <b>
+                                    Research Topics: Dwarf galaxy, AGN, Star Formation.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:chenpb@cwnu.edu.cn">
+                                    <a
+                                        class="button"
+                                        href="mailto:chenpb@cwnu.edu.cn"
+                                    >
                                         chenpb@cwnu.edu.cn
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 15. Xiang Luo -->
+                        <!-- =========================
+                             Xiang Luo
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/XL.png"
-                                 alt="Xiang Luo" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/XL.png"
+                                alt="Xiang Luo"
+                            />
 
                             <h3>Xiang Luo</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Assistant Professor)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Assistant Professor)
+                                </b>
                                 <br>
-                                <b>Research Topics: Planetary atmosphere, Stellar activity, Time domain stellar physics.</b>
+
+                                <b>
+                                    Research Topics: Planetary atmosphere, Stellar activity,
+                                    Time domain stellar physics.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:luoxiang@cwnu.edu.cn">
+                                    <a
+                                        class="button"
+                                        href="mailto:luoxiang@cwnu.edu.cn"
+                                    >
                                         luoxiang@cwnu.edu.cn
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 16. Yan Jiang -->
+                        <!-- =========================
+                             Yan Jiang
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/YJ.png"
-                                 alt="Yan Jiang" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/YJ.png"
+                                alt="Yan Jiang"
+                            />
 
                             <h3>Yan Jiang</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Assistant Professor)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Assistant Professor)
+                                </b>
                                 <br>
-                                <b>Research Topics: Disk Galaixies, Star formation, Radio astronomy.</b>
+
+                                <b>
+                                    Research Topics: Disk Galaixies, Star formation, Radio astronomy.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:yanjiang@cwnu.edu.cn">
+                                    <a
+                                        class="button"
+                                        href="mailto:yanjiang@cwnu.edu.cn"
+                                    >
                                         yanjiang@cwnu.edu.cn
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 17. Min Dai -->
+                        <!-- =========================
+                             Min Dai
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/MD.jpg"
-                                 alt="Min Dai" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/MD.jpg"
+                                alt="Min Dai"
+                            />
 
                             <h3>Min Dai</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Assistant Professor)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Assistant Professor)
+                                </b>
                                 <br>
-                                <b>Research Topics: Red SuperGiants, Stellar catalog, M31 dynamics.</b>
+
+                                <b>
+                                    Research Topics: Red SuperGiants, Stellar catalog, M31 dynamics.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:mindai@cwnu.edu.cn">
+                                    <a
+                                        class="button"
+                                        href="mailto:mindai@cwnu.edu.cn"
+                                    >
                                         mindai@cwnu.edu.cn
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 18. Shi-Qi Zhou -->
+                        <!-- =========================
+                             Shi-Qi Zhou
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/SQZ.jpg"
-                                 alt="Shi-Qi Zhou" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/SQZ.jpg"
+                                alt="Shi-Qi Zhou"
+                            />
 
                             <h3>Shi-Qi Zhou</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Assistant Professor)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Assistant Professor)
+                                </b>
                                 <br>
-                                <b>Research Topics: Pulsars, Milky Way disk.</b>
+
+                                <b>
+                                    Research Topics: Pulsars, Milky Way disk.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:Pulsar.SqZhou@gmail.com">
+                                    <a
+                                        class="button"
+                                        href="mailto:Pulsar.SqZhou@gmail.com"
+                                    >
                                         Pulsar.SqZhou@gmail.com
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 19. Yunchuan Xiang -->
+                        <!-- =========================
+                             Yunchuan Xiang
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/YCX.png"
-                                 alt="Yunchuan Xiang" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/YCX.png"
+                                alt="Yunchuan Xiang"
+                            />
 
                             <h3>Yunchuan Xiang</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Assistant Professor)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Assistant Professor)
+                                </b>
                                 <br>
-                                <b>Research Topics: High Energy astrophysics, Time-Domains astronomy, AGN, Supernovae, Machine Learning.</b>
+
+                                <b>
+                                    Research Topics: High Energy astrophysics, Time-Domains astronomy,
+                                    AGN, Supernovae, Machine Learning.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:xiang_yunchuan@yeah.net">
+                                    <a
+                                        class="button"
+                                        href="mailto:xiang_yunchuan@yeah.net"
+                                    >
                                         xiang_yunchuan@yeah.net
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 20. Qingshun Hu -->
+                        <!-- =========================
+                             Qingshun Hu
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/QSH.png"
-                                 alt="Qingshun Hu" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/QSH.png"
+                                alt="Qingshun Hu"
+                            />
 
                             <h3>Qingshun Hu</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Assistant Professor)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Assistant Professor)
+                                </b>
                                 <br>
-                                <b>Research Topics: Open clusters, Star Clusters Dynamics.</b>
+
+                                <b>
+                                    Research Topics: Open clusters, Star Clusters Dynamics.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:qingshun0801@163.com">
+                                    <a
+                                        class="button"
+                                        href="mailto:qingshun0801@163.com"
+                                    >
                                         qingshun0801@163.com
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 21. Fan Wang -->
+                        <!-- =========================
+                             Fan Wang
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/FW.png"
-                                 alt="Fan Wang" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/FW.png"
+                                alt="Fan Wang"
+                            />
 
                             <h3>Fan Wang</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University (Assistant Professor)</b>
+                                <b>
+                                    Affiliation: China West Normal University (Assistant Professor)
+                                </b>
                                 <br>
-                                <b>Research Topics: Stellar formation history; Moving groups; Milky Way.</b>
+
+                                <b>
+                                    Research Topics: Stellar formation history; Moving groups; Milky Way.
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:wangfanastronomy@163.com">
+                                    <a
+                                        class="button"
+                                        href="mailto:wangfanastronomy@163.com"
+                                    >
                                         wangfanastronomy@163.com
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
 
-                        <!-- 22. Lin Lan -->
+                        <!-- =========================
+                             Lin Lan
+                             ========================= -->
+
                         <article>
-                            <img class="member-photo"
-                                 width="200"
-                                 height="240"
-                                 src="images/LL.png"
-                                 alt="Lin Lan" />
+
+                            <img
+                                class="member-photo"
+                                width="200"
+                                height="240"
+                                src="images/LL.png"
+                                alt="Lin Lan"
+                            />
 
                             <h3>Lin Lan</h3>
 
                             <p>
-                                <b>Affiliation: China West Normal University(Assistant Professor)</b>
+                                <b>
+                                    Affiliation: China West Normal University(Assistant Professor)
+                                </b>
                                 <br>
-                                <b>Research Topics: High Energy Astrophysics; Time-Domain Astronomy</b>
+
+                                <b>
+                                    Research Topics: High Energy Astrophysics; Time-Domain Astronomy
+                                </b>
                             </p>
 
                             <ul class="actions">
+
                                 <li>
-                                    <a class="button"
-                                       href="mailto:lanlin@bao.ac.cn">
+                                    <a
+                                        class="button"
+                                        href="mailto:lanlin@bao.ac.cn"
+                                    >
                                         lanlin@bao.ac.cn
                                     </a>
                                 </li>
+
                             </ul>
+
                         </article>
 
+
                     </div>
-
-                    <!--
-                    <h2 style="margin-top: 150px;">
-                        Part of External members and international collaborator
-                    </h2>
-
-                    <article>
-                        <img width="200"
-                             src="images/GC.jpg"
-                             alt="Giovanni Carraro" />
-
-                        <h3>Giovanni Carraro</h3>
-
-                        <p>
-                            <b>Affiliation: Dipartimento di Fisica e Astronomia, Padova University (full Professor)</b>
-                            <br>
-                            <b>
-                                Research focus: Galaxy formation, N-body and hydrodynamic simulations
-                                of open star clusters, reduction and interpretation of photometric data.
-                            </b>
-                        </p>
-
-                        <ul class="actions">
-                            <li>
-                                <a class="button"
-                                   href="mailto:giovanni.carraro@unipd.it">
-                                    giovanni.carraro@unipd.it
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://orcid.org/0000-0002-0155-9434"
-                                   target="_blank">
-                                    <img class="orcid-icon"
-                                         src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-                                         alt="ORCID" />
-                                </a>
-                            </li>
-                        </ul>
-                    </article>
-                    -->
 
                 </section>
 
             </div>
+
         </div>
 
 
-        <!-- Sidebar -->
+        <!-- =========================
+             侧边栏
+             ========================= -->
+
         <div id="sidebar">
+
             <div class="inner">
 
-                <!-- Menu -->
                 <nav id="menu">
 
                     <header class="major">
@@ -991,7 +1338,10 @@
                         </li>
 
                         <li>
-                            <span class="opener">MWLUDPSG Programs</span>
+
+                            <span class="opener">
+                                MWLUDPSG Programs
+                            </span>
 
                             <ul>
 
@@ -1038,6 +1388,7 @@
                                 </li>
 
                             </ul>
+
                         </li>
 
                         <li>
@@ -1053,27 +1404,29 @@
                 </nav>
 
 
-                <!-- Footer -->
                 <footer id="footer">
 
                     <p class="copyright">
-
                         &copy; Untitled. All rights reserved.
-
                         Design:
-                        <a href="https://html5up.net">HTML5 UP</a>.
-
+                        <a href="https://html5up.net">
+                            HTML5 UP
+                        </a>.
                     </p>
 
                 </footer>
 
             </div>
+
         </div>
 
     </div>
 
 
-    <!-- Scripts -->
+    <!-- =========================
+         JavaScript
+         ========================= -->
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
@@ -1081,4 +1434,5 @@
     <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
