@@ -1,64 +1,62 @@
+
 <!DOCTYPE HTML>
 <html lang="en">
 
 <head>
     <title>Group Members</title>
-
     <meta charset="utf-8" />
-
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no" />
-
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
 
         /* ==============================
-           网站顶部标题
+           网站顶部标题：与 index.html 相同
            ============================== */
 
-        #header .site-title {
+        #header {
+            padding-top: 1.2em !important;
+            padding-bottom: 1.5em !important;
+        }
+
+        #header .logo.site-title {
             display: inline-block;
             text-decoration: none;
             border: 0;
             padding: 0;
+            margin-left: 0;
 
-            /* 两行标题统一字体、字号、粗细 */
             font-family: "Roboto Slab", Georgia, serif;
-            font-size: 1.05em;
+            font-size: 1.5em;
             font-weight: 600;
-            line-height: 1.45;
+            line-height: 1.35;
             letter-spacing: 0;
         }
 
-        /* 两行标题使用完全相同的字体设置 */
-        #header .site-title .institute-name,
-        #header .site-title .lab-name {
+        #header .logo.site-title .institute-name,
+        #header .logo.site-title .lab-name {
             display: block;
             margin: 0;
-
             font-family: inherit;
             font-size: 1em;
             font-weight: inherit;
+            font-style: normal;
             line-height: inherit;
             letter-spacing: inherit;
-
             white-space: nowrap;
         }
 
-        /* 第一行：红色 */
-        #header .site-title .institute-name {
+        #header .logo.site-title .institute-name {
             color: #d5232f;
-            margin-bottom: 0.15em;
+            margin-bottom: 0.4em;
         }
 
-        /* 第二行：蓝色 */
-        #header .site-title .lab-name {
+        #header .logo.site-title .lab-name {
             color: #2c4f7c;
         }
 
-        /* LUTDLab 与第二行完全相同 */
-        #header .site-title .lab-short {
+        #header .logo.site-title .lab-short {
             color: inherit;
             font-family: inherit;
             font-size: inherit;
@@ -171,20 +169,24 @@
 
 
         /* ==============================
-           手机屏幕改为单列
+           手机端：单列布局
            ============================== */
 
         @media screen and (max-width: 736px) {
 
-            /* 两行标题手机端依然保持相同字体和字号 */
-            #header .site-title {
-                font-size: 0.85em;
+            #header {
+                padding-top: 1.2em !important;
+                padding-bottom: 1.5em !important;
             }
 
-            #header .site-title .institute-name,
-            #header .site-title .lab-name {
+            #header .logo.site-title {
                 font-size: 1em;
-                line-height: 1.45;
+            }
+
+            #header .logo.site-title .institute-name,
+            #header .logo.site-title .lab-name {
+                font-size: 1em;
+                line-height: 1.35;
                 white-space: normal;
             }
 
@@ -207,19 +209,15 @@
     </style>
 </head>
 
-
 <body class="is-preload">
 
     <div id="wrapper">
 
         <div id="main">
-
             <div class="inner">
 
                 <!-- Header -->
-
                 <header id="header">
-
                     <a href="index.html" class="logo site-title">
 
                         <span class="institute-name">
@@ -232,26 +230,19 @@
                         </span>
 
                     </a>
-
                 </header>
 
 
                 <!-- Group Members -->
-
                 <section>
-
                     <h2>Group Members</h2>
 
                     <div class="posts" id="member-grid">
 
-
                         <!-- 1. Hai-Feng Wang -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/HFW1.jpg"
                                  alt="Hai-Feng Wang" />
 
@@ -272,14 +263,12 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:haifeng.wang.astro@gmail.com">
                                         haifeng.wang.astro@gmail.com
                                     </a>
                                 </li>
-
                                 <li>
                                     <a href="https://orcid.org/0000-0001-8459-1036"
                                        target="_blank">
@@ -288,19 +277,14 @@
                                              alt="ORCID" />
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 2. Guan-Yu Wang -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/GYW.jpg"
                                  alt="Guan-Yu Wang" />
 
@@ -319,14 +303,12 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:guanyu.wang@studenti.unipd.it">
                                         guanyu.wang@studenti.unipd.it
                                     </a>
                                 </li>
-
                                 <li>
                                     <a href="https://orcid.org/0009-0001-2890-2538"
                                        target="_blank">
@@ -335,19 +317,14 @@
                                              alt="ORCID" />
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 3. Peng Yang -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/YP.png"
                                  alt="Peng Yang" />
 
@@ -364,14 +341,12 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:yangpengastro@gmail.com">
                                         yangpengastro@gmail.com
                                     </a>
                                 </li>
-
                                 <li>
                                     <a href="https://orcid.org/0009-0005-7565-2817"
                                        target="_blank">
@@ -380,19 +355,14 @@
                                              alt="ORCID" />
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 4. Martín López Corredoira -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/MLC.jpg"
                                  alt="Martín López Corredoira" />
 
@@ -410,14 +380,12 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:martin@lopez-corredoira.com">
                                         martin@lopez-corredoira.com
                                     </a>
                                 </li>
-
                                 <li>
                                     <a href="https://orcid.org/0000-0001-6128-6274"
                                        target="_blank">
@@ -426,19 +394,14 @@
                                              alt="ORCID" />
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 5. Qi-Da Li -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/QDL.jpg"
                                  alt="Qi-Da Li" />
 
@@ -456,14 +419,12 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:liqida22@mails.ucas.ac.cn">
                                         liqida22@mails.ucas.ac.cn
                                     </a>
                                 </li>
-
                                 <li>
                                     <a href="https://orcid.org/0009-0005-2965-9276"
                                        target="_blank">
@@ -472,19 +433,14 @@
                                              alt="ORCID" />
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 6. Yong-Jun Jiao -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/YJJ.png"
                                  alt="Yong-Jun Jiao" />
 
@@ -502,14 +458,12 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:jiaoyongjun@tsinghua.edu.cn">
                                         jiaoyongjun@tsinghua.edu.cn
                                     </a>
                                 </li>
-
                                 <li>
                                     <a href="https://orcid.org/0000-0003-2637-277X"
                                        target="_blank">
@@ -518,19 +472,14 @@
                                              alt="ORCID" />
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 7. Guo-Jun Cheng -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/GJC.jpg"
                                  alt="Guo-Jun Cheng" />
 
@@ -547,26 +496,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:chengguojunastro@gmail.com">
                                         chengguojunastro@gmail.com
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 8. Yang-Jun Shi -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/YJS.jpg"
                                  alt="Yang-Jun Shi" />
 
@@ -583,14 +526,12 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:syjunxy@gmail.com">
                                         syjunxy@gmail.com
                                     </a>
                                 </li>
-
                                 <li>
                                     <a href="https://orcid.org/0009-0007-8857-7371"
                                        target="_blank">
@@ -599,19 +540,14 @@
                                              alt="ORCID" />
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 9. Chang-Ping Li -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/CPL.jpg"
                                  alt="Chang-Ping Li" />
 
@@ -628,26 +564,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:lcp912@outlook.com">
                                         lcp912@outlook.com
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 10. Xiao-Peng Liu -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/XPL.jpg"
                                  alt="Xiao-Peng Liu" />
 
@@ -666,14 +596,12 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:lxp@stu.hebtu.edu.cn">
                                         lxp@stu.hebtu.edu.cn
                                     </a>
                                 </li>
-
                                 <li>
                                     <a href="https://orcid.org/0009-0005-1184-2224"
                                        target="_blank">
@@ -682,19 +610,14 @@
                                              alt="ORCID" />
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 11. Yu-Zheng Wang -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/YZW.jpg"
                                  alt="Yu-Zheng Wang" />
 
@@ -711,26 +634,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:swordzun@gmail.com">
                                         swordzun@gmail.com
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 12. Xiao-Yue Zhou -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/XYZ.jpg"
                                  alt="Xiao-Yue Zhou" />
 
@@ -748,26 +665,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:zhouxy@bao.ac.cn">
                                         zhouxy@bao.ac.cn
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 13. Gui-Mei Liu -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/GML.jpg"
                                  alt="Gui-Mei Liu" />
 
@@ -785,26 +696,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:liugm76@gmail.com">
                                         liugm76@gmail.com
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 14. Pei-Bin Chen -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/PBC.png"
                                  alt="Pei-Bin Chen" />
 
@@ -821,26 +726,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:chenpb@cwnu.edu.cn">
                                         chenpb@cwnu.edu.cn
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 15. Xiang Luo -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/XL.png"
                                  alt="Xiang Luo" />
 
@@ -858,26 +757,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:luoxiang@cwnu.edu.cn">
                                         luoxiang@cwnu.edu.cn
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 16. Yan Jiang -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/YJ.png"
                                  alt="Yan Jiang" />
 
@@ -894,26 +787,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:yanjiang@cwnu.edu.cn">
                                         yanjiang@cwnu.edu.cn
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 17. Min Dai -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/MD.jpg"
                                  alt="Min Dai" />
 
@@ -930,26 +817,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:mindai@cwnu.edu.cn">
                                         mindai@cwnu.edu.cn
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 18. Shi-Qi Zhou -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/SQZ.jpg"
                                  alt="Shi-Qi Zhou" />
 
@@ -966,26 +847,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:Pulsar.SqZhou@gmail.com">
                                         Pulsar.SqZhou@gmail.com
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 19. Yunchuan Xiang -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/YCX.png"
                                  alt="Yunchuan Xiang" />
 
@@ -1003,26 +878,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:xiang_yunchuan@yeah.net">
                                         xiang_yunchuan@yeah.net
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 20. Qingshun Hu -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/QSH.png"
                                  alt="Qingshun Hu" />
 
@@ -1039,26 +908,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:qingshun0801@163.com">
                                         qingshun0801@163.com
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 21. Fan Wang -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/FW.png"
                                  alt="Fan Wang" />
 
@@ -1075,26 +938,20 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:wangfanastronomy@163.com">
                                         wangfanastronomy@163.com
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
 
                         <!-- 22. Lin Lan -->
-
                         <article>
-
                             <img class="member-photo"
-                                 width="200"
-                                 height="240"
+                                 width="200" height="240"
                                  src="images/LL.png"
                                  alt="Lin Lan" />
 
@@ -1111,20 +968,16 @@
                             </p>
 
                             <ul class="actions">
-
                                 <li>
                                     <a class="button"
                                        href="mailto:lanlin@bao.ac.cn">
                                         lanlin@bao.ac.cn
                                     </a>
                                 </li>
-
                             </ul>
-
                         </article>
 
                     </div>
-
                 </section>
 
             </div>
@@ -1132,19 +985,16 @@
 
 
         <!-- Sidebar -->
-
         <div id="sidebar">
-
             <div class="inner">
 
+                <!-- Menu -->
                 <nav id="menu">
-
                     <header class="major">
                         <h2>Menu</h2>
                     </header>
 
                     <ul>
-
                         <li>
                             <a href="index.html">Homepage</a>
                         </li>
@@ -1154,57 +1004,31 @@
                         </li>
 
                         <li>
-
-                            <span class="opener">
-                                MWLUDPSG Programs
-                            </span>
+                            <span class="opener">MWLUDPSG Programs</span>
 
                             <ul>
-
                                 <li>
-                                    <a href="paper.html#press">
-                                        MWLUDPSG-BPSG
-                                    </a>
+                                    <a href="paper.html#press">MWLUDPSG-BPSG</a>
                                 </li>
-
                                 <li>
-                                    <a href="paper.html#press">
-                                        MWLUDPSG-GS3Hunter
-                                    </a>
+                                    <a href="paper.html#press">MWLUDPSG-GS3Hunter</a>
                                 </li>
-
                                 <li>
-                                    <a href="paper.html#press">
-                                        MWLUDPSG-SASG
-                                    </a>
+                                    <a href="paper.html#press">MWLUDPSG-SASG</a>
                                 </li>
-
                                 <li>
-                                    <a href="paper.html#press">
-                                        MWLUDPSG-DPSG-MSL
-                                    </a>
+                                    <a href="paper.html#press">MWLUDPSG-DPSG-MSL</a>
                                 </li>
-
                                 <li>
-                                    <a href="paper.html#press">
-                                        MWLUDPSG-DwarfGC
-                                    </a>
+                                    <a href="paper.html#press">MWLUDPSG-DwarfGC</a>
                                 </li>
-
                                 <li>
-                                    <a href="paper.html#press">
-                                        MWLUDPSG-M31
-                                    </a>
+                                    <a href="paper.html#press">MWLUDPSG-M31</a>
                                 </li>
-
                                 <li>
-                                    <a href="paper.html#press">
-                                        MWLUDPSG-DiskGalaxies
-                                    </a>
+                                    <a href="paper.html#press">MWLUDPSG-DiskGalaxies</a>
                                 </li>
-
                             </ul>
-
                         </li>
 
                         <li>
@@ -1214,32 +1038,24 @@
                         <li>
                             <a href="contact_us.html">Contact Us</a>
                         </li>
-
                     </ul>
-
                 </nav>
 
 
+                <!-- Footer -->
                 <footer id="footer">
-
                     <p class="copyright">
-
                         &copy; Untitled. All rights reserved.
-
-                        Design:
-                        <a href="https://html5up.net">HTML5 UP</a>.
-
+                        Design: <a href="https://html5up.net">HTML5 UP</a>.
                     </p>
-
                 </footer>
 
             </div>
-
         </div>
 
     </div>
 
-
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
@@ -1247,5 +1063,4 @@
     <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
