@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <!--
     Editorial by HTML5 UP
@@ -11,55 +12,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 
-    <!-- 顶部实验室名称样式 -->
+    <!-- 顶部实验室名称样式：与 index.html 统一 -->
     <style>
+
+        #header {
+            padding-top: 1.2em !important;
+            padding-bottom: 1.5em !important;
+        }
+
         #header .logo.site-title {
             display: inline-block;
             border-bottom: 0;
             text-decoration: none;
+            padding: 0;
+            margin-left: 0;
 
-            /* 两行标题统一字体 */
             font-family: "Roboto Slab", Georgia, serif;
-            font-size: 1.05em;
+            font-size: 1.5em;
             font-weight: 600;
-            line-height: 1.45;
+            line-height: 1.35;
             letter-spacing: 0;
         }
 
-        #header .site-title-line {
+        /* 两行标题统一字体、大小和粗细 */
+        #header .logo.site-title .site-title-line {
             display: block;
-
-            /* 两行完全继承相同字体设置 */
+            margin: 0;
             font-family: inherit;
             font-size: 1em;
             font-weight: inherit;
+            font-style: normal;
             line-height: inherit;
             letter-spacing: inherit;
-
-            /* 正常电脑页面保持一行，因此总共两行 */
             white-space: nowrap;
         }
 
-        /* 第一行 */
-        #header .institute-title {
+        /* 第一行：红色，两行间距 0.4em */
+        #header .logo.site-title .institute-title {
             color: #d5232f;
+            margin-bottom: 0.4em;
         }
 
-        /* 第二行 */
-        #header .lab-title {
+        /* 第二行：蓝色 */
+        #header .logo.site-title .lab-title {
             color: #2c4f7c;
         }
 
-        /* 小屏幕下避免文字超出屏幕 */
+        /* 手机端 */
         @media screen and (max-width: 736px) {
-            #header .logo.site-title {
-                font-size: 0.85em;
+
+            #header {
+                padding-top: 1.2em !important;
+                padding-bottom: 1.5em !important;
             }
 
-            #header .site-title-line {
+            #header .logo.site-title {
+                font-size: 1em;
+            }
+
+            #header .logo.site-title .site-title-line {
+                font-size: 1em;
+                line-height: 1.35;
                 white-space: normal;
             }
         }
+
     </style>
 
 </head>
