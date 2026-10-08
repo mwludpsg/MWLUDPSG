@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
@@ -32,48 +33,56 @@
                网站顶部标题
                ============================== */
 
-            #header .site-title {
+            /* 缩小顶部留白，使标题上移 */
+            #header {
+                padding-top: 1.2em !important;
+                padding-bottom: 1.5em !important;
+            }
+
+            /* 两行标题共用的字体设置 */
+            #header .logo.site-title {
                 display: inline-block;
                 text-decoration: none;
                 border: 0;
                 padding: 0;
+                margin-left: 0;
 
-                /* 两行标题统一字体、字号、粗细 */
                 font-family: "Roboto Slab", Georgia, serif;
-                font-size: 1.05em;
+                font-size: 1.5em;
                 font-weight: 600;
-                line-height: 1.45;
+                line-height: 1.35;
                 letter-spacing: 0;
             }
 
-            /* 两行标题完全相同的字体设置 */
-            #header .site-title .institute-name,
-            #header .site-title .lab-name {
+            /* 两行标题字体完全一致 */
+            #header .logo.site-title .institute-name,
+            #header .logo.site-title .lab-name {
                 display: block;
                 margin: 0;
 
                 font-family: inherit;
                 font-size: 1em;
                 font-weight: inherit;
+                font-style: normal;
                 line-height: inherit;
                 letter-spacing: inherit;
 
                 white-space: nowrap;
             }
 
-            /* 第一行：红色 */
-            #header .site-title .institute-name {
+            /* 第一行红色，增加两行间距 */
+            #header .logo.site-title .institute-name {
                 color: #d5232f;
-                margin-bottom: 0.15em;
+                margin-bottom: 0.4em;
             }
 
-            /* 第二行：蓝色 */
-            #header .site-title .lab-name {
+            /* 第二行蓝色 */
+            #header .logo.site-title .lab-name {
                 color: #2c4f7c;
             }
 
             /* LUTDLab 与第二行完全一致 */
-            #header .site-title .lab-short {
+            #header .logo.site-title .lab-short {
                 color: inherit;
                 font-family: inherit;
                 font-size: inherit;
@@ -87,14 +96,19 @@
 
             @media screen and (max-width: 736px) {
 
-                #header .site-title {
-                    font-size: 0.85em;
+                #header {
+                    padding-top: 1.2em !important;
+                    padding-bottom: 1.5em !important;
                 }
 
-                #header .site-title .institute-name,
-                #header .site-title .lab-name {
+                #header .logo.site-title {
                     font-size: 1em;
-                    line-height: 1.45;
+                }
+
+                #header .logo.site-title .institute-name,
+                #header .logo.site-title .lab-name {
+                    font-size: 1em;
+                    line-height: 1.35;
                     white-space: normal;
                 }
 
